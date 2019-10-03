@@ -5,9 +5,9 @@ from camera.calibrate import calibrate_affine_camera_matrix,compute_K_from_vanis
 from single_view.single_view import compute_vanish_points,compute_angle_between_planes
 
 def test_calibrate_affine_camera_matrix():
-    real_XY = np.load('data/real_XY.npy')
-    front_image = np.load('data/front_image.npy')
-    back_image =np.load('data/back_image.npy')
+    real_XY = np.load('../data/real_XY.npy')
+    front_image = np.load('../data/front_image.npy')
+    back_image =np.load('../data/back_image.npy')
 
     img1, img2 = get_homo_cor(front_image), get_homo_cor(back_image)
     real_XY1 = np.hstack((real_XY,np.zeros((real_XY.shape[0],1))))
